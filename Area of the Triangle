@@ -1,0 +1,22 @@
+import java.io.*;
+import java.lang.Math;
+class Sample
+{
+    public static void main(String args[])throws Exception
+    {
+        float s,a,b,c,area;
+        String input;
+        InputStreamReader isr=new InputStreamReader(System.in);
+        BufferedReader br=new BufferedReader(isr);
+        input=br.readLine();
+        String in[]=input.split(" ");
+        a=Float.parseFloat(in[0]);
+        b=Float.parseFloat(in[1]);
+        c=Float.parseFloat(in[2]);
+        s=(float)(a+b+c)/2;
+        area=(float)Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        System.out.format("%.2f",area);
+        
+        
+    }
+}
